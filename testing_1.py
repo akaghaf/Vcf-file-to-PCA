@@ -21,8 +21,6 @@ def read_vcf(path):
         sep='\t'
     ).rename(columns={'#CHROM': 'CHROM'})
 
-
-
 dictionary = {}
 callset = read_vcf(file_name)
 important_names = []
@@ -40,19 +38,11 @@ for index, row in callset.iterrows():
                 
                 dictionary[row["POS"]].append(int(a) + int(b))
 
-
-
-
-#print(dictionary)
 SUPERLIST = []
 for pos in dictionary:
     SUPERLIST.append(dictionary[pos])
-#print(SUPERLIST)
 NUMPYMATRIX = np.matrix(SUPERLIST)
 print(NUMPYMATRIX)
-
-
-
 
 
 k = 1 # target dimension(s)
