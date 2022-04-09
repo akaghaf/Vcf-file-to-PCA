@@ -62,10 +62,10 @@ idx = v.argsort()[::-1] # Sort descending and get sorted indices
 v = v[idx] # Use indices on eigv vector
 w = w[:,idx] # 
 
-print("Eigenvalue vektoru: ", v)
-print("Eigenvektorler: ", w)
+print("Eigenvalue vectored: ", v)
+print("Eigenvectors: ", w)
 
 
-print("Sonuc: ", data.dot(w[:, :k]))
+print("Conclusion: ", data.dot(w[:, :k]))
 
 
