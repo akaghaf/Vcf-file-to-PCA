@@ -23,17 +23,14 @@ def read_vcf(path):
 
 
 
-
-
 dictionary = {}
 callset = read_vcf(file_name)
 important_names = []
 
 for index, row in callset.iterrows():
     for col in callset.columns:
-        #print(row["POS"])
+
         dictionary[row["POS"]] = []
-        #dictionary[row["POS"]]['parse'] = []
 
         for col in row.keys():
             # print(col)
@@ -42,14 +39,6 @@ for index, row in callset.iterrows():
                 a, b = row[col].split('|')
                 
                 dictionary[row["POS"]].append(int(a) + int(b))
-
-
-        
-            
-            # print(row[col])
-
-        
-        #important_names.append(col)
 
 
 
